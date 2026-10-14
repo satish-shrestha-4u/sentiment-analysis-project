@@ -1,4 +1,4 @@
-# Sentiment Analysis pipeline
+# Sentiment Analysis Pipeline
 
 ## Setup
 
@@ -21,4 +21,3 @@ python src/predict.py "I absolutely loved it" "That was awful"
 # Example:
 # 1    0.982    I absolutely loved it
 # 0    0.015    That was awful
->>>>>>> 8814f3e14cb7ae38932a682372b07b39c5d9bd8e
