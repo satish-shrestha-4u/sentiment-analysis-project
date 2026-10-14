@@ -14,3 +14,7 @@ pip install -r requirements.txt
 
 ## Train
 python src/train.py --data data/train.csv --out models/sentiment.joblib
+
+ ## Predict
+
+Please predict- python src/predict.py
