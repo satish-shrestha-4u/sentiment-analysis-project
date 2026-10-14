@@ -15,6 +15,10 @@ pip install -r requirements.txt
 ## Train
 python src/train.py --data data/train.csv --out models/sentiment.joblib
 
- ## Predict
-
-Please predict- python src/predict.py
+## Predict
+python src/predict.py "I absolutely loved it" "That was awful"
+# Output format: label  probability  text
+# Example:
+# 1    0.982    I absolutely loved it
+# 0    0.015    That was awful
+>>>>>>> 8814f3e14cb7ae38932a682372b07b39c5d9bd8e
