@@ -33,6 +33,6 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Run the formatter script
+      - name: Run prediction smoke check
         run: |
-          python src/predict.py --input data/raw_sales_data.csv --output data/cleaned_sales_data.csv
+          python src/predict.py "I absolutely loved it" "That was awful"
