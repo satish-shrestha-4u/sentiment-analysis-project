@@ -14,10 +14,12 @@ def main(data_path: str, output_path: str) -> None:
     if not {"text", "label"}.issubset(df.columns):
         raise ValueError("CSV must contain 'text' and 'label' columns")
 
-    model = Pipeline([
-        ("tfidf", TfidfVectorizer(ngram_range=(1, 2))),
-        ("classifier", LogisticRegression(max_iter=1000)),
-    ])
+    model = Pipeline(
+        [
+            ("tfidf", TfidfVectorizer(ngram_range=(1, 2))),
+            ("classifier", LogisticRegression(max_iter=1000)),
+        ]
+    )
     model.fit(df["text"].astype(str), df["label"].astype(int))
 
     output = Path(output_path)

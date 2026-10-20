@@ -4,12 +4,7 @@ import pytest
 
 from src.predict import load_model, predict_texts
 
-
-MODEL_PATH = (
-    Path(__file__).resolve().parents[1]
-    / "models"
-    / "sentiment.joblib"
-)
+MODEL_PATH = Path(__file__).resolve().parents[1] / "models" / "sentiment.joblib"
 
 
 @pytest.fixture(scope="module")
@@ -22,7 +17,7 @@ def classifier():
     ("text", "expected_label"),
     [
         ("I absolutely loved it", 1),  # positive
-        ("That was awful", 0),         # negative
+        ("That was awful", 0),  # negative
     ],
 )
 def test_predict_texts(classifier, text, expected_label):
