@@ -6,7 +6,7 @@ def process_data(df: pd.DataFrame) -> pd.DataFrame:
     # print("Starting data processing!")
 
     # my_variable = 123
-    
+
     # We want to inspect the dataframe head during debugging, but it's unused.
     data_snapshot = df.head()  # noqa: F841
 
