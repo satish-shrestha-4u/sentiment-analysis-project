@@ -8,7 +8,7 @@ def process_data(df: pd.DataFrame) -> pd.DataFrame:
     # my_variable = 123
 
     # We want to inspect the dataframe head during debugging, but it's unused.
-    data_snapshot = df.head()  # noqa: F841
+    print(df.head())  # noqa: T201
 
     # Clean column names by stripping whitespace and converting to lower case
     df.columns = df.columns.str.strip().str.lower()
@@ -28,5 +28,5 @@ if __name__ == "__main__":
     initial_df = pd.DataFrame(data)
 
     cleaned_df = process_data(initial_df)
-    print("Cleaned DataFrame:")
-    print(cleaned_df)
+    # print("Cleaned DataFrame:")
+    # print(cleaned_df)

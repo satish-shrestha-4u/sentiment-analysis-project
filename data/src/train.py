@@ -25,7 +25,7 @@ def main(data_path: str, output_path: str) -> None:
     output = Path(output_path)
     output.parent.mkdir(parents=True, exist_ok=True)
     dump(model, output)
-    print(f"Model saved to {output}")
+    print(f"Model saved to {output}")  # noqa: T201
 
 
 if __name__ == "__main__":
